@@ -41,3 +41,10 @@ a {
     text-decoration: none;
     padding: 1em;
 }
+
+#favorites {
+    border: ridge;
+    border-color: maroon;
+    border-width: 2px;
+   margin: 5em;
+}

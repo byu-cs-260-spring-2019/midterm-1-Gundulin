@@ -19,12 +19,16 @@
         <div v-else>
             <ul v-if="searched">
                 <li v-for="book in books">{{ book.title }} <br><br>
-                    {{ book.author }} <br><br> Published: {{ book.publishDate }}
+                    {{ book.author }} <br><br> Published: {{ book.publishDate }} <br>
+                    <button>Add to Favorites</button>
                 </li>
             </ul>
         </div>
-        <div>
-            
+        <div id="favorites">
+           <h2>Favorites</h2>
+           <ul v-for="book in books">
+               <il v-if="book.favorite"> {{ book.title}} <button>Remove</button></il>
+           </ul>
         </div>
             
         </div>

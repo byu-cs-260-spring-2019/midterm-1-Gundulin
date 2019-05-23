@@ -3,7 +3,7 @@ var app = new Vue({
     /** Data Section */
     data: {
         pageTitle: 'The Cosmic Librarian',
-        url: 'http://openlibrary.org/search.json?q=', /* http://openlibrary.org/search.json?q=the+lord+of+the+rings */
+        url: 'http://openlibrary.org/search.json?q=',
         searchData: '',
         imageURL1: 'https://openlibrary.org/api/books?bibkeys=',
         imageURL2: '&jscmd=details&format=json',
@@ -14,6 +14,7 @@ var app = new Vue({
             author: '',
             cover: '',
             publishDate: '',
+            favorite: false,
         }],
         favorites: [{}],
     },
