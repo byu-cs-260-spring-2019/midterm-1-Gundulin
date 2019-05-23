@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="./style.css"/>
+        <title>Midterm 1</title>
+    </head>
+    <body>
+        <!-- The Vue -->
+        <div id="app">
+            <h1>{{ pageTitle }}</h1>
+            <h2>Search the Cosmos for the Book you Desire!</h2>
+            <form v-on:submit.prevent="search">
+                <input v-model="searchData" placeholder="Book Title"></p>
+                <button type="submit">Search the Cosmos!</button>
+            </form>
+        <div v-if="loading">
+            <p>Searching the Cosmos...</p>
+        </div>
+        <div v-else>
+            <ul v-if="searched">
+                <li v-for="book in books">{{ book.title }} <br><br>
+                    {{ book.author }} <br><br> Published: {{ book.publishDate }}
+                </li>
+            </ul>
+        </div>
+        <div>
+            
+        </div>
+            
+        </div>
+        <footer>
+            <a href="https://github.com/byu-cs-260-spring-2019/midterm-1-Gundulin">GitHub</a>
+        </footer>
+    </body>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+  
+
+
+</html>
